@@ -1,0 +1,6 @@
+///////<HEADER>///////
+prefix=sys_inko
+Mikero=DePbo.dll
+Pbo Type is: Arma Addon
+Sha: '3F5146C437D6022FD2BC0087994E30DCC62317FA'
+//////</HEADER>//////
