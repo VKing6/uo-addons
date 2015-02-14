@@ -27,7 +27,7 @@
 			};
 
 			// Set position name tag
-			_pos = worldToScreen [visiblePositionASL _unit select 0,visiblePositionASL _unit select 1,(visiblePositionASL _unit select 2)+(_unit selectionPosition "launcher" select 2)+0.65];
+			_pos  = _unit modelToWorldVisual [0,0,(_unit selectionPosition "launcher" select 2)+0.65];
 			
 			if (count _pos>0) then {
 				_hud = _ui displayCtrl (23501 + _index);
