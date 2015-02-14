@@ -27,7 +27,10 @@
 			};
 
 			// Set position name tag
-			_pos  = _unit modelToWorldVisual [0,0,(_unit selectionPosition "launcher" select 2)+0.65];
+			_pos = worldToScreen [getPosATL _unit select 0,getPosATL _unit select 1,(getPosATL _unit select 2)+(_unit selectionPosition "launcher" select 2)+0.65];
+			if(surfaceIsWater _pos) then {
+				_pos = worldToScreen [getPosASLW _unit select 0,getPosASLW _unit select 1,(getPosASLW _unit select 2)+(_unit selectionPosition "launcher" select 2)+0.65];
+			};
 			
 			if (count _pos>0) then {
 				_hud = _ui displayCtrl (23501 + _index);
