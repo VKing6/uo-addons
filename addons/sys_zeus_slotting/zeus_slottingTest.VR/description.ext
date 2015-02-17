@@ -1,0 +1,610 @@
+#include "cba_nocache.hpp"
+
+class UO_Templates {
+       
+        class LoadoutTemplates {
+                class SL {
+                        weapons[] = {"rhs_m4_m320","Binocular"};
+                        magazines[] = {"30Rnd_556x45_Stanag",7,"30Rnd_556x45_Stanag_Tracer_Yellow",2,"1Rnd_SmokeRed_Grenade_shell",2,"1Rnd_SmokeGreen_Grenade_shell",2};
+                        items[] = {"rhsusf_acc_ACOG","rhsusf_acc_anpeq15A","rhsusf_ANPVS_14","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+                        radios[] = {"ACRE_PRC148","ACRE_PRC343"};
+                       
+                        backpack = "tin_backpack_indus_ocp_gren";
+                        vest = "rhsusf_iotv_ocp_Squadleader";
+                        uniform = "tin_uniform_indus_ocp";
+						goggles = "G_Combat";
+						helmet = "rhsusf_ach_helmet_ocp";
+						
+						addItemToVest[] = {"rhs_mag_M433_HEDP",4};						
+						addItemToBackpack[] = {"rhs_mag_m67",2,"UGL_FlareWhite_F",4,"UGL_FlareRed_F",2,"UGL_FlareGreen_F",2};
+                };
+        };
+       
+ 
+        class SlotTemplates {
+                class US_Army_LightInfantryCompany_01 {                  
+                        class Groups {
+                                class COHQ {
+                                        name = "Company HQ";
+                                        class Slots {
+                                                class CompanyCdr {
+                                                        name = "CO HQ | Company Commander";
+                                                        loadoutType = "CompanyCdr";
+                                                };
+                                                class CompanyXO {
+                                                        name = "CO HQ | Company XO";
+                                                        loadoutType = "CompanyXO";
+                                                };
+                                                class 1stSgt {
+                                                        name = "CO HQ | First Sergeant";
+                                                        loadoutType = "1stSgt";
+                                                };
+												class RTO {
+                                                        name = "CO HQ | Radio Telephone Operator 1";
+                                                        loadoutType = "RTO";
+                                                };
+												class RTO {
+                                                        name = "CO HQ | Radio Telephone Operator 2";
+                                                        loadoutType = "RTO";
+                                                };
+                                        };
+                                };
+								class 1PLTHQ {
+                                        name = "1st Platoon HQ";
+                                        class Slots {
+                                                class PltLeader {
+                                                        name = "1 PLT | Platoon Leader";
+                                                        loadoutType = "PL";
+                                                };
+                                                class PltSgt {
+                                                        name = "1 PLT | Platoon Sergeant";
+                                                        loadoutType = "PSG";
+                                                };
+                                                class PltMedic {
+                                                        name = "1 PLT | Platoon Medic";
+                                                        loadoutType = "PltMedic";
+                                                };
+												class RTO {
+                                                        name = "1 PLT | Radio Telephone Operator";
+                                                        loadoutType = "RTO";
+                                                };
+                                        };
+                                };                
+                                class 1PLT1SQD {
+                                        name = "1 PLT 1st Squad";
+                                        class Slots {
+                                                class SqdLeader {
+                                                        name = "1-1 | Squad Leader";
+                                                        loadoutType = "SL";
+                                                };
+                                                class TeamLeader {
+                                                        name = "1-1-A | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "1-1-A | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "1-1-A | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "1-1-A | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+												class TeamLeader {
+                                                        name = "1-1-B | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "1-1-B | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "1-1-B | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "1-1-B | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+                                        };
+                                };
+								class 1PLT2SQD {
+                                        name = "1 PLT 2nd Squad";
+                                        class Slots {
+                                                class SqdLeader {
+                                                        name = "1-2 | Squad Leader";
+                                                        loadoutType = "SL";
+                                                };
+                                                class TeamLeader {
+                                                        name = "1-2-A | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "1-2-A | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "1-2-A | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "1-2-A | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+												class TeamLeader {
+                                                        name = "1-2-B | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "1-2-B | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "1-2-B | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "1-2-B | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+                                        };
+                                };
+								class 1PLT3SQD {
+                                        name = "1 PLT 3rd Squad";
+                                        class Slots {
+                                                class SqdLeader {
+                                                        name = "1-3 | Squad Leader";
+                                                        loadoutType = "SL";
+                                                };
+                                                class TeamLeader {
+                                                        name = "1-3-A | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "1-3-A | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "1-3-A | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "1-3-A | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+												class TeamLeader {
+                                                        name = "1-3-B | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "1-3-B | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "1-3-B | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "1-3-B | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+                                        };
+                                };
+								class 1PLT4SQD {
+                                        name = "1 PLT Weapons Squad";
+                                        class Slots {
+                                                class SqdLeader {
+                                                        name = "1-4 | Squad Leader";
+                                                        loadoutType = "SL";
+                                                };
+                                                class TeamLeader {
+                                                        name = "1-4-A | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "1-4-A | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "1-4-A | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "1-4-A | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+												class TeamLeader {
+                                                        name = "1-4-B | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "1-4-B | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "1-4-B | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "1-4-B | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+                                        };
+                                };
+								class 2PLTHQ {
+                                        name = "2nd Platoon HQ";
+                                        class Slots {
+                                                class PltLeader {
+                                                        name = "2 PLT | Platoon Leader";
+                                                        loadoutType = "PL";
+                                                };
+                                                class PltSgt {
+                                                        name = "2 PLT | Platoon Sergeant";
+                                                        loadoutType = "PSG";
+                                                };
+                                                class PltMedic {
+                                                        name = "2 PLT | Platoon Medic";
+                                                        loadoutType = "PltMedic";
+                                                };
+												class RTO {
+                                                        name = "2 PLT | Radio Telephone Operator";
+                                                        loadoutType = "RTO";
+                                                };
+                                        };
+                                };                
+                                class 2PLT1SQD {
+                                        name = "2 PLT 1st Squad";
+                                        class Slots {
+                                                class SqdLeader {
+                                                        name = "2-1 | Squad Leader";
+                                                        loadoutType = "SL";
+                                                };
+                                                class TeamLeader {
+                                                        name = "2-1-A | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "2-1-A | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "2-1-A | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "2-1-A | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+												class TeamLeader {
+                                                        name = "2-1-B | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "2-1-B | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "2-1-B | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "2-1-B | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+                                        };
+                                };
+								class 2PLT2SQD {
+                                        name = "2 PLT 2nd Squad";
+                                        class Slots {
+                                                class SqdLeader {
+                                                        name = "2-2 | Squad Leader";
+                                                        loadoutType = "SL";
+                                                };
+                                                class TeamLeader {
+                                                        name = "2-2-A | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "2-2-A | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "2-2-A | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "2-2-A | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+												class TeamLeader {
+                                                        name = "2-2-B | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "2-2-B | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "2-2-B | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "2-2-B | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+                                        };
+                                };
+								class 2PLT3SQD {
+                                        name = "2 PLT 3rd Squad";
+                                        class Slots {
+                                                class SqdLeader {
+                                                        name = "2-3 | Squad Leader";
+                                                        loadoutType = "SL";
+                                                };
+                                                class TeamLeader {
+                                                        name = "2-3-A | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "2-3-A | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "2-3-A | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "2-3-A | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+												class TeamLeader {
+                                                        name = "2-3-B | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "2-3-B | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "2-3-B | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "2-3-B | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+                                        };
+                                };
+								class 2PLT4SQD {
+                                        name = "2 PLT Weapons Squad";
+                                        class Slots {
+                                                class SqdLeader {
+                                                        name = "2-4 | Squad Leader";
+                                                        loadoutType = "SL";
+                                                };
+                                                class TeamLeader {
+                                                        name = "2-4-A | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "2-4-A | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "2-4-A | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "2-4-A | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+												class TeamLeader {
+                                                        name = "2-4-B | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "2-4-B | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "2-4-B | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "2-4-B | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+                                        };
+                                };
+								class 3PLTHQ {
+                                        name = "3nd Platoon HQ";
+                                        class Slots {
+                                                class PltLeader {
+                                                        name = "3 PLT | Platoon Leader";
+                                                        loadoutType = "PL";
+                                                };
+                                                class PltSgt {
+                                                        name = "3 PLT | Platoon Sergeant";
+                                                        loadoutType = "PSG";
+                                                };
+                                                class PltMedic {
+                                                        name = "3 PLT | Platoon Medic";
+                                                        loadoutType = "PltMedic";
+                                                };
+												class RTO {
+                                                        name = "3 PLT | Radio Telephone Operator";
+                                                        loadoutType = "RTO";
+                                                };
+                                        };
+                                };                
+                                class 3PLT1SQD {
+                                        name = "3 PLT 1st Squad";
+                                        class Slots {
+                                                class SqdLeader {
+                                                        name = "3-1 | Squad Leader";
+                                                        loadoutType = "SL";
+                                                };
+                                                class TeamLeader {
+                                                        name = "3-1-A | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "3-1-A | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "3-1-A | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "3-1-A | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+												class TeamLeader {
+                                                        name = "3-1-B | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "3-1-B | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "3-1-B | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "3-1-B | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+                                        };
+                                };
+								class 3PLT2SQD {
+                                        name = "3 PLT 2nd Squad";
+                                        class Slots {
+                                                class SqdLeader {
+                                                        name = "3-2 | Squad Leader";
+                                                        loadoutType = "SL";
+                                                };
+                                                class TeamLeader {
+                                                        name = "3-2-A | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "3-2-A | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "3-2-A | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "3-2-A | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+												class TeamLeader {
+                                                        name = "3-2-B | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "3-2-B | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "3-2-B | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "3-2-B | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+                                        };
+                                };
+								class 3PLT3SQD {
+                                        name = "3 PLT 3rd Squad";
+                                        class Slots {
+                                                class SqdLeader {
+                                                        name = "3-3 | Squad Leader";
+                                                        loadoutType = "SL";
+                                                };
+                                                class TeamLeader {
+                                                        name = "3-3-A | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "3-3-A | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "3-3-A | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "3-3-A | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+												class TeamLeader {
+                                                        name = "3-3-B | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "3-3-B | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "3-3-B | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "3-3-B | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+                                        };
+                                };
+								class 3PLT4SQD {
+                                        name = "3 PLT Weapons Squad";
+                                        class Slots {
+                                                class SqdLeader {
+                                                        name = "3-4 | Squad Leader";
+                                                        loadoutType = "SL";
+                                                };
+                                                class TeamLeader {
+                                                        name = "3-4-A | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "3-4-A | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "3-4-A | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "3-4-A | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+												class TeamLeader {
+                                                        name = "3-4-B | Team Leader";
+                                                        loadoutType = "TL";
+                                                };
+                                                class AutoRifleman {
+                                                        name = "3-4-B | Automatic Rifleman";
+                                                        loadoutType = "AR";
+                                                };
+												class Grenadier {
+                                                        name = "3-4-B | Grenadier";
+                                                        loadoutType = "GRN";
+                                                };
+												class Rifleman {
+                                                        name = "3-4-B | Rifleman";
+                                                        loadoutType = "RFLM";
+                                                };
+                                        };
+                                };
+                        };
+                };
+        };
+};
