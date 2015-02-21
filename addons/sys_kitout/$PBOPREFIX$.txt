@@ -1,6 +1,0 @@
-///////<HEADER>///////
-prefix=sys_kitout
-Mikero=DePbo.dll
-Pbo Type is: Arma Addon
-Sha: '51CDA4903586A613706711179EC4D3A9FC773298'
-//////</HEADER>//////

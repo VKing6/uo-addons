@@ -1,7 +1,7 @@
 
 class CfgPatches
 {
- class uo_a3_framework
+ class ADDON
  {
   units[] = {};
   weapons[] = {};
@@ -9,10 +9,5 @@ class CfgPatches
   requiredAddons[] = {};
  };
 };
-class Extended_PreInit_EventHandlers
-{
- class uo_sys_kitout
- {
-  init = "call compile preprocessFileLineNumbers '\sys_kitout\XEH_preinit.sqf'";
- };
-};
+
+#include "CfgEventHandlers.hpp"

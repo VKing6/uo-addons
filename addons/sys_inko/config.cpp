@@ -1,6 +1,6 @@
 class CfgPatches
 {
- class inko_disposable_a3
+ class ADDON
  {
   units[] = {"INKO_NLAW_USED_TUBE","INKO_RPG26_USED_TUBE","INKO_RPG18_USED_TUBE","INKO_RSHG2_USED_TUBE","INKO_M136_USED_TUBE","INKO_M136_HEDP_USED_TUBE","INKO_M136_HP_USED_TUBE"};
   weapons[] = {"INKO_NLAW_USED","rhs_weap_M136_used","rhs_weap_M136_hedp_used","rhs_weap_M136_hp_used"};
@@ -275,26 +275,26 @@ class CfgCloudlets
  class RHS_RocketBackfireRPGNT;
  class RHS_Fired_RPG26: RHS_RocketBackfireRPGNT
  {
-  beforeDestroyScript = "\sys_inko\empty.sqf";
+  beforeDestroyScript = "\x\uo\addons\sys_inko\empty.sqf";
  };
  class RHS_Fired_RPG18: RHS_Fired_RPG26
  {
-  beforeDestroyScript = "\sys_inko\empty.sqf";
+  beforeDestroyScript = "\x\uo\addons\sys_inko\empty.sqf";
  };
  class RHS_Fired_Rshg2: RHS_Fired_RPG26
  {
-  beforeDestroyScript = "\sys_inko\empty.sqf";
+  beforeDestroyScript = "\x\uo\addons\sys_inko\empty.sqf";
  };
  class RHS_Fired_M136HEAT: RHS_RocketBackfireRPGNT
  {
-  beforeDestroyScript = "\sys_inko\empty.sqf";
+  beforeDestroyScript = "\x\uo\addons\sys_inko\empty.sqf";
  };
  class RHS_Fired_M136HEDP: RHS_Fired_M136HEAT
  {
-  beforeDestroyScript = "\sys_inko\empty.sqf";
+  beforeDestroyScript = "\x\uo\addons\sys_inko\empty.sqf";
  };
  class RHS_Fired_M136HP: RHS_Fired_M136HEAT
  {
-  beforeDestroyScript = "\sys_inko\empty.sqf";
+  beforeDestroyScript = "\x\uo\addons\sys_inko\empty.sqf";
  };
 };
