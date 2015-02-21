@@ -23,7 +23,7 @@
 				if(alive _leader) then {
 					if(_leader == player) then {
 						_playerIsLeader = true;
-					}
+					};
 				};
 				
 				if (_playerIsLeader) then {
