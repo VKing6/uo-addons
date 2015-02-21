@@ -17,19 +17,31 @@
 		[{
 			if (a3_nameHUD_enabled && alive player) then {
 				_nearUnits = [a3_nameHUD_drawDistance] call uo_fnc_nameHUD_get_near_units;
-
-				if (leader (group player) == player) then {
+				_leader = leader (group player);
+				_playerIsLeader = false;
+				
+				if(alive _leader) then {
+					if(_leader == player) then {
+						_playerIsLeader = true;
+					}
+				};
+				
+				if (_playerIsLeader) then {
 					{
-						_unitTeam = _x getVariable ["a3_nameHUD_groupAssignment","MAIN"];
-						if (_unitTeam != assignedTeam _x) then {
-							_x setVariable ["a3_nameHUD_groupAssignment",assignedTeam _x,true];
+						if(alive _x) then {
+							_unitTeam = _x getVariable ["a3_nameHUD_groupAssignment","MAIN"];
+							if (_unitTeam != assignedTeam _x) then {
+								_x setVariable ["a3_nameHUD_groupAssignment",assignedTeam _x,true];
+							};
 						};
 					} forEach units (group player);
 				} else {
 					{
-						_unitTeam = _x getVariable ["a3_nameHUD_groupAssignment","MAIN"];
-						if (_unitTeam != assignedTeam _x) then {
-							_x assignTeam _unitTeam;
+						if(alive _x) then {
+							_unitTeam = _x getVariable ["a3_nameHUD_groupAssignment","MAIN"];
+							if (_unitTeam != assignedTeam _x) then {
+								_x assignTeam _unitTeam;
+							};
 						};
 					} forEach units (group player);
 				};
