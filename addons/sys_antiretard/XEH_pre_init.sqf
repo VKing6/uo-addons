@@ -19,8 +19,8 @@ GVAR(grenadeDisabled) = false;
 GVAR(gotWarning) = true;
 GVAR(kills) = [];
 
-if(isServer) then {
-	[] call compile preprocessFileLineNumbers "initializeMarkerLog.sqf";
+if(isDedicated) then {
+	[] call compile preprocessFileLineNumbers QUOTE(PATHTOF(initializeMarkerLog.sqf));
 };
 
 ADDON = true;

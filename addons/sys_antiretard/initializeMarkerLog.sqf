@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 _init='
 if (HasInterface) then {
     ZEU_MkLog_fcollectMrkInfo = {
