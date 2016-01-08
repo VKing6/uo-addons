@@ -1,9 +1,6 @@
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 
 
-/* Define Common Macros */
-#define DEFAULT_PARAM(idx,dft)	(if ((count _this) > idx) then {_this select idx} else {dft})
-
 /* Begin Init */
 UO_debugConsole = false;
 
@@ -18,17 +15,18 @@ if (hasInterface) then {
 	/*waitUntil { !isNil "UO_admins" && !isNil player };
 	_admin = (getPlayerUID player) in UO_admins;
 	if(_admin) then {
-		["United Operations", "Admin Console", ["player", [], -10, "_this call uo_fnc_selfInteractMenu", "main"], [DIK_APPS, [false, false, false]], false, "keydown"] call CBA_fnc_registerKeybindToFleximenu;
+		["United Operations", "Admin Console", ["player", [], -10, "_this call uo_fnc_selfInteractMenu", "main"], [DIK_APPS, [false, false, false]], false, "keydown"] call cba_fnc_addKeybind;
 	} else {
-		
+
 	};*/
 
 	/* Load Debug Console Documentation */
 	[] spawn {
 		waitUntil {!isNull player && {!isNil "UO_admins"}};
 		if (!isMultiplayer || (getPlayerUID player) in UO_admins) then {
-			["United Operations", "Admin Console", ["player", [], -10, "_this call uo_fnc_selfInteractMenu", "main"], [DIK_APPS, [false, false, false]], false, "keydown"] call CBA_fnc_registerKeybindToFleximenu;
-			
+			//["United Operations", "Admin Console", ["player", [], -10, "_this call uo_fnc_selfInteractMenu", "main"], [DIK_APPS, [false, false, false]], false, "keydown"] call cba_fnc_addKeybind;
+			["United Operations", "adminconsole", "Admin Console", ["player", [], -10, "_this call uo_fnc_selfInteractMenu"], [DIK_APPS, [false, false, false]]] call cba_fnc_addKeybindToFleximenu;
+
 			private ["_docs", "_docStr"];
 			_docs = call compile preprocessFile "\x\uo\addons\a3_debugconsole\documentation.sqf";
 			_docStr = "<br/>UO Debug Console - Function Documentation<br/><br/>By: Naught, Krause<br/>";

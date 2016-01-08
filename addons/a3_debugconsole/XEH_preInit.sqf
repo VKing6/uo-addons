@@ -1,5 +1,7 @@
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 
+uo_fnc_createZeus = compile preprocessFileLineNumbers "\x\uo\addons\a3_debugconsole\fn\fn_createZeus.sqf";
+uo_fnc_removeZeus = compile preprocessFileLineNumbers "\x\uo\addons\a3_debugconsole\fn\fn_removeZeus.sqf";
 
 // Force activating all addons for this run of the missionStart
 private["_cfgPatches", "_class", "_addons"];
