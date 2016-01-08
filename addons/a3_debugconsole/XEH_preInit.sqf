@@ -7,8 +7,8 @@ uo_fnc_removeZeus = compile preprocessFileLineNumbers "\x\uo\addons\a3_debugcons
 private["_cfgPatches", "_class", "_addons"];
 _cfgPatches = configfile >> "cfgpatches";
 for "_i" from 0 to (count _cfgPatches - 1) do {
-	_class = _cfgPatches select _i;
-	if (isclass _class) then {_addons pushBack (configname _class);};
+    _class = _cfgPatches select _i;
+    if (isclass _class) then {_addons pushBack (configname _class);};
 };
 _addons call bis_fnc_activateaddons;
 
