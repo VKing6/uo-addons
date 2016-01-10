@@ -1,7 +1,8 @@
 /* Load Administrators */
-UO_admins = call compile ("[" + (preprocessFile "\x\uo\addons\a3_debugconsole\admins.sqf") + "]");
+UO_admins = ["_SP_PLAYER_"];  // call compile ("[" + (preprocessFile "\x\uo\addons\a3_debugconsole\admins.sqf") + "]");
 if(isDedicated) then {
-    UO_admins_userconfig = call compile ("[" + (preprocessFile "\userconfig\uo_admins.txt") + "]");
+    // UO_admins_userconfig = call compile ("[" + (preprocessFile "\userconfig\uo_admins.txt") + "]");
+    UO_admins_userconfig = getArray (ConfigFile >> "ACE_ServerSettings" >> "UO_Admins" >> "admins");
 };
 
 if(!isNil "UO_admins_userconfig") then {
