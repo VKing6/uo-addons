@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 class CfgPatches {
     class a3_debugconsole {
         units[] = {};
@@ -36,9 +37,6 @@ class CfgFunctions {
         class Monitor {
             class mapMonitor {
                 file = "\x\uo\addons\a3_debugconsole\fn\fn_mapMonitor.sqf";
-            };
-            class overlay {
-                file = "\x\uo\addons\a3_debugconsole\fn\fn_overlay.sqf";
             };
         };
         class Admin {
