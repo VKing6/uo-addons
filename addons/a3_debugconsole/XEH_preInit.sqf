@@ -12,8 +12,19 @@ for "_i" from 0 to (count _cfgPatches - 1) do {
 };
 _addons call bis_fnc_activateaddons;
 
+if (isServer) then {
+    /* Load Administrators */
+    UO_admins = ["_SP_PLAYER_"];
+    if (isDedicated) then {
+        UO_admins_userconfig = getArray (ConfigFile >> "ACE_ServerSettings" >> "UO_Admins" >> "admins");
+    };
+    if (!isNil "UO_admins_userconfig") then {
+        UO_admins = UO_admins + UO_admins_userconfig;
+    };
+    publicVariable "UO_admins";
+};
+
 if(!isDedicated) exitWith {};
-//UO_localDefinedAdmins = call compile ("[" + (preprocessFile "\x\uo\addons\a3_debugconsole\admins.sqf") + "]");
 
 
 UO_efnc_killed = {};

@@ -1,15 +1,3 @@
-/* Load Administrators */
-UO_admins = ["_SP_PLAYER_"];  // call compile ("[" + (preprocessFile "\x\uo\addons\a3_debugconsole\admins.sqf") + "]");
-if(isDedicated) then {
-    // UO_admins_userconfig = call compile ("[" + (preprocessFile "\userconfig\uo_admins.txt") + "]");
-    UO_admins_userconfig = getArray (ConfigFile >> "ACE_ServerSettings" >> "UO_Admins" >> "admins");
-};
-
-if(!isNil "UO_admins_userconfig") then {
-    UO_admins = UO_admins + UO_admins_userconfig;
-};
-
-publicVariable "UO_admins";
 UO_trackKills = [];
 
 UO_efnc_killed = {
