@@ -2,8 +2,9 @@
 #include "script_component.hpp"
 class CfgPatches {
     class ADDON {
-        units[] = {"UO_B_Mortar_60mm","UO_O_Mortar_60mm","UO_I_Mortar_60mm"};
-        weapons[] = {"UO_mortar_60mm"};  // ,"UO_mortar_60mm_single"
+        units[] = {"UO_B_Mortar_60mm","UO_O_Mortar_60mm","UO_I_Mortar_60mm",
+          "UO_Box_60mm_Mo_HE","UO_Box_60mm_Mo_Smoke","UO_Box_60mm_Mo_Illum"};
+        weapons[] = {"UO_mortar_60mm","UO_mortar_60mm_single"};
         requiredVersion = 1.0;
         requiredAddons[] = {"A3_Static_F_Mortar_01","A3_Weapons_F","ace_mk6mortar"};
         author = "VKing";
@@ -14,10 +15,10 @@ class CfgAmmo {
     class Sh_82mm_AMOS;
     class UO_Sh_60mm: Sh_82mm_AMOS {
         ace_frag_metal = 1500;
-        ace_frag_charge = 250;
-        hit = 115;
+        ace_frag_charge = 200;
+        hit = 105;
         indirectHit = 20;
-        indirectHitRange = 12;
+        indirectHitRange = 6;
     };
     class Flare_82mm_AMOS_White;
     class UO_Flare_60mm_white: Flare_82mm_AMOS_White {
@@ -27,7 +28,6 @@ class CfgAmmo {
 };
 
 class CfgMagazines {
-    /*
     class ACE_1Rnd_82mm_Mo_HE;
     class UO_1Rnd_60mm_Mo_HE: ACE_1Rnd_82mm_Mo_HE {
         displayName = "60mm HE Round";
@@ -48,7 +48,6 @@ class CfgMagazines {
         author = "VKing";
         mass = 40;
     };
-    */
 
     class 8Rnd_82mm_Mo_shells;
     class UO_8Rnd_60mm_Mo_shells: 8Rnd_82mm_Mo_shells {
@@ -70,14 +69,12 @@ class CfgMagazines {
 };
 
 class CfgWeapons {
-    /*
     class ACE_mortar_82mm;
     class UO_mortar_60mm_single: ACE_mortar_82mm {
         displayName = "Mortar 60mm";
         author = "VKing";
         magazines[] = {"UO_1Rnd_60mm_Mo_HE","UO_1Rnd_60mm_Mo_Smoke","UO_1Rnd_60mm_Mo_Illum"};
     };
-    */
 
     class mortar_82mm;
     class UO_mortar_60mm: mortar_82mm {
@@ -115,7 +112,6 @@ class CfgVehicles {
             dissasembleTo[] = {"UO_B_Mortar_60mm_weapon","B_Mortar_01_support_F"};
             displayName = "";
         };
-        /*
         class ACE_Actions: ACE_Actions {
             class ACE_Mk6Mortar_loadActions {
                 condition = QUOTE(false);
@@ -147,7 +143,6 @@ class CfgVehicles {
                 };
             };
         };
-        */
     };
     class UO_B_Mortar_60mm: UO_Mortar_60mm_base {
         author = "VKing";
@@ -188,8 +183,8 @@ class CfgVehicles {
     };
     class UO_B_Mortar_60mm_weapon: B_Mortar_01_weapon_F {
         author = "VKing";
-        displayName = "Folded Mk6 60mm Tube and Bipod";
-        mass = 300;
+        displayName = "Folded Mk60 Tube and Bipod";
+        mass = 280;
         class assembleInfo: assembleInfo {
             assembleTo = "UO_B_Mortar_60mm";
         };
@@ -199,8 +194,8 @@ class CfgVehicles {
     };
     class UO_O_Mortar_60mm_weapon: O_Mortar_01_weapon_F {
         author = "VKing";
-        displayName = "Folded Mk6 60mm Tube and Bipod";
-        mass = 300;
+        displayName = "Folded Mk60 Tube and Bipod";
+        mass = 280;
         class assembleInfo: assembleInfo {
             assembleTo = "UO_O_Mortar_60mm";
         };
@@ -210,18 +205,17 @@ class CfgVehicles {
     };
     class UO_I_Mortar_60mm_weapon: I_Mortar_01_weapon_F {
         author = "VKing";
-        displayName = "Folded Mk6 60mm Tube and Bipod";
-        mass = 300;
+        displayName = "Folded Mk60 Tube and Bipod";
+        mass = 280;
         class assembleInfo: assembleInfo {
             assembleTo = "UO_I_Mortar_60mm";
         };
     };
-    /*
     class ACE_Box_82mm_Mo_HE;
     class UO_Box_60mm_Mo_HE: ACE_Box_82mm_Mo_HE {
         displayName = "60mm HE Box";
         author = "VKing";
-        transportMaxmagazines = 12;
+        maximumLoad = 480;
         class TransportMagazines {
             MACRO_ADDMAGAZINE(UO_1Rnd_60mm_Mo_HE,12);
         };
@@ -238,5 +232,4 @@ class CfgVehicles {
             MACRO_ADDMAGAZINE(UO_1Rnd_60mm_Mo_Illum,12);
         };
     };
-    */
 };
