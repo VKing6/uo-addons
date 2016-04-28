@@ -11,6 +11,23 @@ class CfgPatches {
     };
 };
 
+
+class CfgCloudlets {
+    class MortarExp;
+    class UO_60mmExp: MortarExp {
+        size[] = {"0.05 * intensity + 2","0.05 * intensity + 1.25"};
+    };
+};
+
+class MortarExplosion {
+    class MortarExp1;
+};
+class UO_60mmExplosion: MortarExplosion {
+    class MortarExp1: MortarExp1 {
+        type = "UO_60mmExp";
+    };
+};
+
 class CfgAmmo {
     class Sh_82mm_AMOS;
     class UO_Sh_60mm: Sh_82mm_AMOS {
@@ -19,6 +36,7 @@ class CfgAmmo {
         hit = 105;
         indirectHit = 20;
         indirectHitRange = 6;
+        explosionEffects = "UO_60mmExplosion";
     };
     class Flare_82mm_AMOS_White;
     class UO_Flare_60mm_white: Flare_82mm_AMOS_White {
